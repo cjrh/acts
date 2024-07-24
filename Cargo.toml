@@ -1,0 +1,8 @@
+[package]
+name = "acts"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+terminal-menu = "3.0.0"
+toml = { version = "0.8.15", features = ["preserve_order"] }
