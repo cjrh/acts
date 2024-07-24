@@ -44,7 +44,16 @@ These are the design considerations:
 
 - Commands should be executed by YOUR shell, not inside `acts`. 
 This decreases surface area for me to worry about, and ensures the
-best cross-platform compatibility.
+best cross-platform compatibility. My examples above are for `bash`,
+but it should work with any shell as long as that shell can 
+distinguish between `stdout` and `stderr`, and has a way to `eval`
+or otherwise execute a command.
+
+- Different collections of commands for different circumstances.
+That is what the toml config file is for. You can have different
+config files for different projects, or different config files for
+different parts of the same project. So the actions can be
+customized for the situation.
 
 - Few dependencies, the less the better. I use `std` to parse args
 for example, instead of bigger libraries like `clap`. I would have
