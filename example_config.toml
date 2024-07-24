@@ -1,0 +1,7 @@
+[[todaysdate]]
+title = "Today's date"
+command = "echo ${date}"
+
+[[listdir]]
+title = "List directory"
+command = "ls -lah"

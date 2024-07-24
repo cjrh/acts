@@ -1,0 +1,5 @@
+@todaydate:
+  echo $(date)
+
+listdir:
+  ls -lah
