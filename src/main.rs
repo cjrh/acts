@@ -53,8 +53,9 @@ fn main() {
         let actions = actions.as_table().unwrap();
         let mut acts = HashMap::new();
         for (key, value) in actions {
+            let name = value.get("name").unwrap().as_str().unwrap();
             let action = Action {
-                name: value.get("name").unwrap().as_str().unwrap().to_string(),
+                name: name.to_string(),
                 description: value
                     .get("description")
                     .unwrap()
@@ -63,7 +64,7 @@ fn main() {
                     .to_string(),
                 command: value.get("command").unwrap().as_str().unwrap().to_string(),
             };
-            acts.insert(key.to_string(), action);
+            acts.insert(name.to_string(), action);
         }
         acts
     } else {

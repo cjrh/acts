@@ -31,8 +31,8 @@ And then first you will see this menu displayed in your terminal:
   use wasd, jk, or arrow keys           
   enter to select, q or esc to exit     
   -----------------------               
-> listdir                               
-  todaysdate       
+> List directory                               
+  Today's date       
 ```
 
 And when you select an option, the command will be executed 
@@ -53,10 +53,17 @@ none, so I use `toml` which is a small dependency.
 
 ## Future plans
 
+### justfile support
+
 I would like to add `justfile` as a supported config file format.
 In this case, I would just populate the menu with commands from
 the `justfile` and execute them with `just`. A problem to be solved
 is what to do with just commands that take parameters.
+
+### npm's `package.json`
+
+I would like to add support for `package.json` as a config file,
+allowing you to run npm scripts from the menu.
 
 ## Dev workflow
 
